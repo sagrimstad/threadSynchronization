@@ -10,12 +10,17 @@ public class MovieTicketServer {
     //TODO: TBD
   }
 
-  public void bookTicket() {
+  public synchronized void bookTicket(String customerName, int numberOfSeats ) {
     //TODO: TBD
-    int numberOfSeats = 0;
+    System.out.println("Hi, " + customerName + " "  + availableSeats + " Seats available for " + movie);
     if((availableSeats - numberOfSeats) < 0) {
+      System.out.println("Hi," + customerName + " : Number of seats " + numberOfSeats + " ordered is not available for " + movie);
       //TODO: TBD
+    } else {
+      availableSeats -= numberOfSeats;
+      System.out.println("Hi," + customerName + " " + numberOfSeats + " Seats booked successfully for " + movie);
     }
   }
 
 }
+

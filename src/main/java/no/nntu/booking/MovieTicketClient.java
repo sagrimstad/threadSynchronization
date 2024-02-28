@@ -1,3 +1,4 @@
+
 package no.nntu.booking;
 
 public class MovieTicketClient extends Thread {
@@ -6,13 +7,14 @@ public class MovieTicketClient extends Thread {
   private MovieTicketServer server;
 
   public MovieTicketClient(MovieTicketServer server, String customerName, int numberOfTickets) {
-    this.server = server;
     this.customerName = customerName;
     this.numberOfTickets = numberOfTickets;
+    this.server = server;
     //TODO: TBD
   }
 
   public void run() {
+    server.bookTicket(customerName, numberOfTickets);
     //TODO: TBD
   }
 
