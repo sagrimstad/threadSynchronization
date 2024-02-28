@@ -10,12 +10,10 @@ public class MovieTicketClient extends Thread {
     this.customerName = customerName;
     this.numberOfTickets = numberOfTickets;
     this.server = server;
-    //TODO: TBD
   }
 
   public void run() {
     server.bookTicket(customerName, numberOfTickets);
-    //TODO: TBD
   }
 
 }
