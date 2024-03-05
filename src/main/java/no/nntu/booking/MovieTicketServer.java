@@ -13,11 +13,11 @@ public class MovieTicketServer {
     System.out.println("Hi, " + customerName + " "
         + availableSeats + " Seats available for " + movie);
     if((availableSeats - numberOfSeats) < 0) {
-      System.out.println("Hi," + customerName + " : Number of seats "
+      System.out.println("Hi, " + customerName + " : Number of seats "
           + numberOfSeats + " ordered is not available for " + movie);
     } else {
       availableSeats -= numberOfSeats;
-      System.out.println("Hi," + customerName + " " + numberOfSeats
+      System.out.println("Hi, " + customerName + " " + numberOfSeats
           + " Seats booked successfully for " + movie);
     }
   }
